@@ -1,18 +1,7 @@
-import { test } from "./encapsulateTest";
+import { expect, test } from "./test";
 import { sum, subtract } from "./maths";
 
 // 테스팅 모듈
-const expect = (result: number) => {
-    return {
-        toBe: (expected: number) => {
-            if (result !== expected) {
-                throw new Error(`${result} is not equal to ${expected}`);
-            }
-        },
-        toEqual: (expected: number) => {},
-        toBeGreaterThan: (expected: number) => {},
-    };
-};
 
 test("sum adds numbers", () => {
     const result = sum(3, 7);
